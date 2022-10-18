@@ -1,16 +1,12 @@
 # Security Policy
 
-## Supported Versions
+## Potrebna Unity verzija
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Kako bi mogli raditi na ovom projektu potrebna vam je vrezija unitya:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2021.3.1f.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 2021.3.4f1 | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
