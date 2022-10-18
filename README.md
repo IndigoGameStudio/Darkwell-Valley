@@ -3,8 +3,9 @@
 Potrebno je preuzeti github na svom računalu 
           https://desktop.github.com/
           
-Kad ste preuzeli github prijavite se na njega s istim računom koji koristite trenutno na githubu.
-Kada ste sve to uredno napravili potrebno je odabrati "FILE > CLONE REPOSITORY"
+Kad ste preuzeli github prijavite se na njega s istim računom.
+
+Kada ste sve to uredno napravili potrebno je unutar programa odabrati "FILE > CLONE REPOSITORY"
 
 ![Screenshot_3](https://user-images.githubusercontent.com/29728342/196375902-9bcdbf30-059d-426a-b689-db3fb15c816c.png)
 
