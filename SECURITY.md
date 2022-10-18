@@ -2,16 +2,15 @@
 
 ## Potrebna Unity verzija
 
-Kako bi mogli raditi na ovom projektu potrebna vam je vrezija unitya:
+Kako bi mogli raditi na ovom projektu potreban vam je Unity:
 
 | Version | Supported          |
 | ------- | ------------------ |
 | 2021.3.4f1 | :white_check_mark: |
 
-## Reporting a Vulnerability
+## Važno
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Nije moguće raditi na različitim verzijama unitya zbog konflikta.
+Ukliko imate krivu verziju sve failove koje ima unity će github prepoznati kao izmjene.
+Što bi moglo izazvati još više problema i više konflikta ukoliko se te izmjene pushaju na master branch.
+Tako da vrlo je važno da imate točnu verziju unitya jer će vam inaće svaki vaš pull request biti odbijen.
