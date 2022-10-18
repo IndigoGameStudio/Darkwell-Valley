@@ -19,6 +19,10 @@ Kad ste to napravili uspješno ste klonirali main branch na vašem računalu te 
 C:\Users\\[VAŠ PC]\Documents\GitHub\Darkwell-Valley
 
 
+
+
+##
+
 # Security Policy
 
 ## Potrebna Unity verzija
