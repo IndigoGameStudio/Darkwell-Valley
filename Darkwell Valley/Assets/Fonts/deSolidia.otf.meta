@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fed85b6133dca27469f955d83dcd5e88
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - de Solidia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 71e5ef433c574314d9981ed1a2584bd1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
