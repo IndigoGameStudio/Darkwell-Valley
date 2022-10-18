@@ -1,4 +1,4 @@
-# Darkwell-Valley
+# Darkwell-Valley Setup
 
 Potrebno je preuzeti github na svom računalu 
           https://desktop.github.com/
