@@ -16,4 +16,4 @@ I odaberite naš repository i pritisnite clone.
 
 Kad ste to napravili uspješno ste klonirali main branch na vašem računalu te vam se nalazi na lokaciji
 
-C:\Users\[VAŠ PC]\Documents\GitHub\Darkwell-Valley
+C:\Users\\[VAŠ PC]\Documents\GitHub\Darkwell-Valley
