@@ -33,6 +33,8 @@ Kako bi mogli raditi na ovom projektu potreban vam je Unity:
 | ------- | ------------------ |
 | 2021.3.4f1 | :white_check_mark: |
 
+Download > unityhub://2021.3.4f1/cb45f9cae8b7
+
 ## Važno
 
 Nije moguće raditi na različitim verzijama unitya zbog konflikta.
