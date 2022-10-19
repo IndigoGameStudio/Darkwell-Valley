@@ -32,6 +32,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Emission: {r: 0.380597, g: 0.380597, b: 0.380597, a: 0}
     - _QOffset_a1: {r: 0, g: 0, b: 0, a: 0}
-    - _QOffset_a2: {r: 0, g: 0.82500017, b: 0, a: 0}
+    - _QOffset_a2: {r: 0, g: 0.65000033, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
