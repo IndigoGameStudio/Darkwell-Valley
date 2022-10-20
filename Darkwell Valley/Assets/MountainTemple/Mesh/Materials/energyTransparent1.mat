@@ -40,7 +40,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Emission: {r: 0.12480509, g: 0.45338416, b: 0.619403, a: 0}
     - _QOffset_a1: {r: 0, g: 0, b: 0, a: 0}
-    - _QOffset_a2: {r: 0, g: 0.2650007, b: 0, a: 0}
+    - _QOffset_a2: {r: 0, g: 0.9000001, b: 0, a: 0}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
     - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.41, a: 1}
