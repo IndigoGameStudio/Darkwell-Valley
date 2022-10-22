@@ -3,42 +3,32 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using UnityEditor;
+using System.Collections;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject go_Menu;
-    public GameObject go_ExitCheck;
-    public GameObject go_Settings;
-
-    
-
-    public void Event_NewGame()
+    public Animator[] _anim;
+    public void Back()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }
-
-    public void Event_LoadGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void Event_Settings()
-    {
-        go_Settings.SetActive(true);
-        go_Menu.SetActive(false);
+        foreach (var item in _anim)
+        {
+            item.enabled = true;
+            item.Play("Reset");
+        }
     }
 
     public void Event_QuitGame()
     {
-        go_Menu.SetActive(false);
-        go_ExitCheck.SetActive(true);
+        Application.Quit();
     }
 
-    public void Back()
+    public void StartGame()
     {
-        go_Menu.SetActive(true);
-        go_ExitCheck.SetActive(false);
-        go_Settings.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
