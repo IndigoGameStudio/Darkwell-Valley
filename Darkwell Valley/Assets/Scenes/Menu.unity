@@ -17333,9 +17333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15071afe92972f44997d05a338bc13f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go_Menu: {fileID: 782714637}
-  go_ExitCheck: {fileID: 1827806937}
-  go_Settings: {fileID: 1416864959}
+  _anim: []
 --- !u!1001 &533738141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24472,8 +24470,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DARKWELL VALLEY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7837993571765a148b4f3d89eef72e45, type: 2}
-  m_sharedMaterial: {fileID: 4738187415084065486, guid: 7837993571765a148b4f3d89eef72e45, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c7d65137cc807354dbcc9411de181d46, type: 2}
+  m_sharedMaterial: {fileID: 1683476910049614287, guid: c7d65137cc807354dbcc9411de181d46, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
