@@ -35,7 +35,7 @@ Kako bi mogli raditi na ovom projektu potreban vam je Unity:
 
 Download > unityhub://2021.3.4f1/cb45f9cae8b7
 
-Zalepite u web browser i stisnite enter.
+Zaljepite u web browser i stisnite enter.
 
 ![Screenshot_13](https://user-images.githubusercontent.com/29728342/196695777-154f9cd8-2700-4126-945d-46533fb67cc0.png)
 
@@ -45,5 +45,5 @@ Zalepite u web browser i stisnite enter.
 
 Nije moguće raditi na različitim verzijama unitya zbog konflikta.
 Ukliko imate krivu verziju sve failove koje ima unity će github prepoznati kao izmjene.
-Što bi moglo izazvati još više problema i više konflikta ukoliko se te izmjene pushaju na master branch.
+To bi moglo izazvati još više problema i više konflikta ukoliko se te izmjene pushaju na master branch.
 Tako da vrlo je važno da imate točnu verziju unitya jer će vam inaće svaki vaš pull request biti odbijen.
