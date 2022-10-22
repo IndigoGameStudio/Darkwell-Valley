@@ -7425,6 +7425,7 @@ MonoBehaviour:
   _zoomSpeed: 10
   _audioHover: {fileID: 1725463113865905188, guid: 435d02cf698d9cb4081ef88bba0eb1ba, type: 3}
   _audioClick: {fileID: 3438482201982887889, guid: a1df058a65f0fcf439b3386768d402a8, type: 3}
+  _AudioParent: {fileID: 1286933157}
   _endPos: {x: 3.5, y: 1.2, z: 1.2}
   _savePos: {x: 0, y: 0, z: 0}
 --- !u!114 &216017199
@@ -18569,6 +18570,7 @@ MonoBehaviour:
   _zoomSpeed: 5
   _audioHover: {fileID: 1725463113865905188, guid: 435d02cf698d9cb4081ef88bba0eb1ba, type: 3}
   _audioClick: {fileID: 3438482201982887889, guid: a1df058a65f0fcf439b3386768d402a8, type: 3}
+  _AudioParent: {fileID: 1286933157}
   _endPos: {x: 3.5, y: 4.5, z: 0}
   _savePos: {x: 3, y: 4, z: 0}
 --- !u!1 &625381477
@@ -25572,6 +25574,7 @@ MonoBehaviour:
   _zoomSpeed: 10
   _audioHover: {fileID: 1725463113865905188, guid: 435d02cf698d9cb4081ef88bba0eb1ba, type: 3}
   _audioClick: {fileID: 3438482201982887889, guid: a1df058a65f0fcf439b3386768d402a8, type: 3}
+  _AudioParent: {fileID: 1286933157}
   _endPos: {x: 3.5, y: 1.2, z: 1.2}
   _savePos: {x: 0, y: 0, z: 0}
 --- !u!114 &853553680
@@ -30678,6 +30681,7 @@ MonoBehaviour:
   _zoomSpeed: 10
   _audioHover: {fileID: 1725463113865905188, guid: 435d02cf698d9cb4081ef88bba0eb1ba, type: 3}
   _audioClick: {fileID: 3438482201982887889, guid: a1df058a65f0fcf439b3386768d402a8, type: 3}
+  _AudioParent: {fileID: 1286933157}
   _endPos: {x: 3.5, y: 1.2, z: 1.2}
   _savePos: {x: 0, y: 0, z: 0}
 --- !u!114 &1024052195
@@ -50802,6 +50806,7 @@ MonoBehaviour:
   _zoomSpeed: 10
   _audioHover: {fileID: 1725463113865905188, guid: 435d02cf698d9cb4081ef88bba0eb1ba, type: 3}
   _audioClick: {fileID: 3438482201982887889, guid: a1df058a65f0fcf439b3386768d402a8, type: 3}
+  _AudioParent: {fileID: 1286933157}
   _endPos: {x: 3.5, y: 4.5, z: 0}
   _savePos: {x: 3, y: 4, z: 1}
 --- !u!114 &1672872870
@@ -57641,6 +57646,7 @@ MonoBehaviour:
   _zoomSpeed: 10
   _audioHover: {fileID: 1725463113865905188, guid: 435d02cf698d9cb4081ef88bba0eb1ba, type: 3}
   _audioClick: {fileID: 3438482201982887889, guid: a1df058a65f0fcf439b3386768d402a8, type: 3}
+  _AudioParent: {fileID: 1286933157}
   _endPos: {x: 3.5, y: 1.2, z: 1.2}
   _savePos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1737906732
@@ -67157,6 +67163,7 @@ MonoBehaviour:
   _zoomSpeed: 10
   _audioHover: {fileID: 1725463113865905188, guid: 435d02cf698d9cb4081ef88bba0eb1ba, type: 3}
   _audioClick: {fileID: 3438482201982887889, guid: a1df058a65f0fcf439b3386768d402a8, type: 3}
+  _AudioParent: {fileID: 1286933157}
   _endPos: {x: 3.5, y: 4.5, z: 0}
   _savePos: {x: 3, y: 4, z: 1}
 --- !u!114 &2059482067

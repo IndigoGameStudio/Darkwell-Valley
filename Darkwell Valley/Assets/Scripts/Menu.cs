@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
@@ -7,9 +7,10 @@ using System.Collections;
 
 public class Menu : MonoBehaviour
 {
-    public Animator[] _anim;
+    [SerializeField] Animator[] _anim;
     public void Back()
     {
+        // Resetira sve animacije prilikom vraćanja u meni.
         foreach (var item in _anim)
         {
             item.enabled = true;
@@ -17,18 +18,10 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void Event_QuitGame()
-    {
-        Application.Quit();
-    }
+    public void Event_QuitGame() => Application.Quit();
 
-    public void StartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    public void StartGame() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-    public void LoadGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    public void LoadGame() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
 }

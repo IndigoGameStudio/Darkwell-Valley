@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using TMPro;
@@ -6,20 +6,23 @@ using System.Collections.Generic;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public Settings _settings;
-    public AudioMixer _audioMixer;
-
-    //
-    public Slider _volumeSlider;
-    public Slider _sensivitySldier;
-    public TMP_Dropdown _qualityDropdown;
-    public TMP_Dropdown _resolutionDropdown;
-    public Toggle _toggleFullScreen;
+    [SerializeField] Settings _settings;
+    [SerializeField] AudioMixer _audioMixer;
+    [Space]
+    [SerializeField] Slider _volumeSlider;
+    [SerializeField] Slider _sensivitySldier;
+    [SerializeField] TMP_Dropdown _qualityDropdown;
+    [SerializeField] TMP_Dropdown _resolutionDropdown;
+    [SerializeField] Toggle _toggleFullScreen;
 
     Resolution[] resolutions;
 
     private void Awake()
     {
+        // Prisluškivanje svih opcija u postavkama te izima
+        // njihove vrijendosti prilikom promjene te ih sprema
+        // i postavlja te vrijednosti za stvari koje su namjenjene (Volume, grafika, full screen itd.)
+
         _volumeSlider.onValueChanged.AddListener((value) =>
         {
             _audioMixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
@@ -50,10 +53,13 @@ public class SettingsMenu : MonoBehaviour
         });
     }
 
+    // ===================================================================================================
+
     private void Start()
     {
+        // Prilikom starta igrice povlači sve spremljene informacije iz ScriptableObjecta
+        // te ih implementira u UI.
         LoadResolutions();
-
         _volumeSlider.value = _settings.Volume;
         _sensivitySldier.value = _settings.Sensivity;
         _qualityDropdown.value = _settings.Quality;
@@ -62,8 +68,13 @@ public class SettingsMenu : MonoBehaviour
         SetResolution(_settings.Resolution);
     }
 
+    // ===================================================================================================
+
     private void LoadResolutions()
     {
+
+        // Uzima sve važeće rezolucije te ih sprema u listu
+        // nakon ispisane liste sprema u dropdown.
         resolutions = Screen.resolutions;
         List<string> options = new List<string>();
         _resolutionDropdown.ClearOptions();
@@ -76,8 +87,13 @@ public class SettingsMenu : MonoBehaviour
         _resolutionDropdown.RefreshShownValue();
     }
 
+    // ===================================================================================================
+
     public void SetResolution (int resolutionIndex)
     {
+        // Postavlja odabranu rezoluciju nakon pritiska opcije u dropdownu.
+        // Ova funckija se aktivira na eventu u Inspectoru.
+        // Uzima stupčanju vrijednost (dropdown) i postavlja ovdje kako bi se znalo koju rezoluciju treba postaviti.
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }

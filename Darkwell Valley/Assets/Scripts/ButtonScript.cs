@@ -1,53 +1,64 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public bool _useZoom = true;
-    public float _zoomSpeed = 5;
+    [SerializeField] float _zoomSpeed = 5;
+    [HideInInspector] bool zoomEffect;
     [Space]
-    public GameObject _audioHover;
-    public GameObject _audioClick;
+
+    [SerializeField] GameObject _audioHover;
+    [SerializeField] GameObject _audioClick;
+    [SerializeField] GameObject _AudioParent;
     [Space]
-    public Vector3 _endPos;
-    public Vector3 _savePos;
 
-    bool zoomEffect;
+    [SerializeField] Vector3 _endPos;
+    [SerializeField] Vector3 _savePos;
 
-    void Start()
-    {
+    
+
+    void Start() {
+
+        // Sprema startnu poziciju "Scale" od tipke ukoliko nije predhodno navedena.
+        // To služi kako bi tipka prilikom uvečavanja znala na koju poziciju se vratiti kad se miš makne s tipke.
         if (_savePos == Vector3.zero) { _savePos = transform.localScale; }
     }
 
+    // =====================================================================================================
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
+    public void OnPointerExit(PointerEventData eventData) => zoomEffect = false; // Za deaktivaciju zoom effecta.
+
+    // =====================================================================================================
+
+    public void Update() {
+
+        if(zoomEffect)
+            // Ukoliko je cursor postavljen na tipku onda se zoom radi od trenutne lokalne pozicije do kranje _endPos.
+            transform.localScale = Vector3.Lerp(transform.localScale, _endPos, _zoomSpeed * Time.deltaTime);
+        else
+            // Ukoliko je cursor maknut s tipke onda se s pozicija vraća na početnu spremljenu veličinu.
+            transform.localScale = Vector3.Lerp(transform.localScale, _savePos, _zoomSpeed * Time.deltaTime);
+    }
+
+    // =====================================================================================================
+    public void OnPointerEnter(PointerEventData eventData) {
+
+        // Za aktivaciju zoom effecta
         zoomEffect = true;
-        GameObject objSound =Instantiate(_audioHover, transform.position, Quaternion.identity);
+        // Kreira instancu od Prefeb-a za zvuk i postavlja je kao child od "Audio" gameObjecta i uništava tu instancu nakon 0.3 sec.
+        GameObject objSound = Instantiate(_audioHover, transform.position, Quaternion.identity);
+        objSound.transform.parent = _AudioParent.transform;
         Destroy(objSound, 0.3f);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        zoomEffect = false;
-    }
+    // =====================================================================================================
 
-    public void Update()
-    {
-        if (!_useZoom)
-            return;
+    public void OnPointerClick(PointerEventData eventData) {
 
-        if(zoomEffect)
-        transform.localScale = Vector3.Lerp(transform.localScale, _endPos, _zoomSpeed * Time.deltaTime);
-        else
-        transform.localScale = Vector3.Lerp(transform.localScale, _savePos, _zoomSpeed * Time.deltaTime);
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
+        // Prilikom klika kreira instancu od Prefeb-a za zvuk i postavlja je kao child od "Audio" gameObjecta
+        // i uništava tu instancu nakon 0.5 sec.
         GameObject objSound = Instantiate(_audioClick, transform.position, Quaternion.identity);
+        objSound.transform.parent = _AudioParent.transform;
         Destroy(objSound, 0.5f);
     }
 }
