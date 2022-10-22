@@ -45,5 +45,5 @@ Zaljepite u web browser i stisnite enter.
 
 Nije moguće raditi na različitim verzijama unitya zbog konflikta.
 Ukliko imate krivu verziju sve failove koje ima unity će github prepoznati kao izmjene.
-Što bi moglo izazvati još više problema i više konflikta ukoliko se te izmjene pushaju na master branch.
+To bi moglo izazvati još više problema i više konflikta ukoliko se te izmjene pushaju na master branch.
 Tako da vrlo je važno da imate točnu verziju unitya jer će vam inaće svaki vaš pull request biti odbijen.
