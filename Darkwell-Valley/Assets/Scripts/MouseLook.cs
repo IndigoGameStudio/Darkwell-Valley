@@ -6,7 +6,7 @@ public class MouseLook : MonoBehaviour
 {
     [SerializeField] Transform playerBody;
     [SerializeField] float Sensitivity = 10;
-    float yRotation;
+    float xRotation;
 
     private void Start()
     {
@@ -31,12 +31,13 @@ public class MouseLook : MonoBehaviour
         /** 
          Uzimamo vrijednosti visine miša (Y) i stavljamo limit. 
          Da se ne može ići u zrak više od 90 i spustiti kameru ispod -90
+         I ako je visina miša Y na kameri je rotacija za gore i dole X
         */
-        yRotation -= mouseY;
-        yRotation = Mathf.Clamp(yRotation, -90f, 90);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90);
 
         /** Visinu stavljamo u transfrom što je kamera i samo da se uređuje rotacija kemre (gore, dole) */
-        transform.localRotation = Quaternion.Euler(yRotation, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         /** Rotiranje ljevo i desno se odnosi na tjelo igrača i rotira se igrač a ne kamera. */
         playerBody.Rotate(Vector3.up, mouseX);
     }
