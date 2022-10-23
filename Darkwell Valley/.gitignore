@@ -13,6 +13,14 @@
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
+Darkwell\wValley/UserSettings/EditorUserSetting.asset
+*.asset
+Darkwell Valley/UserSettings/EditorUserSettings.asset
+*/UserSettings/EditorUserSettings.asset
+**/EditorUserSettings.asset
+Darkwell-Valley/Darkwell Valley/UserSettings/EditorUserSettings.asset
+Darkwell-Valley/Darkwell\wValley/UserSettings/EditorUserSettings.asset
+
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
 
