@@ -2,3 +2,5 @@
 Darkwell\wValley/UserSettings/EditorUserSetting.asset
 *.asset
 Darkwell Valley/UserSettings/EditorUserSettings.asset
+*/UserSettings/EditorUserSettings.asset
+**/EditorUserSettings.asset
