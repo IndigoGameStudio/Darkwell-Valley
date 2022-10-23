@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
     [SerializeField] Animator[] _anim;
     public void Back()
     {
-        // Resetira sve animacije prilikom vraćanja u meni.
+        /** Resetira sve animacije prilikom vraćanja u meni.*/
         foreach (var item in _anim)
         {
             item.enabled = true;

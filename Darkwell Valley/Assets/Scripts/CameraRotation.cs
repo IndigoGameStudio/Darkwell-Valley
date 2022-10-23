@@ -8,8 +8,8 @@ public class CameraRotation : MonoBehaviour
 
     void Update()
     {
-        // Služi za rotaciju kamere u menu.
-        // Postavljena je kamera kao child te se vrti paret kamere.
+        /** Služi za rotaciju kamere u menu.
+        Postavljena je kamera kao child te se vrti paret kamere.*/
         transform.Rotate(new Vector3(0, _rotationSpeed * Time.deltaTime, 0));
     }
 }

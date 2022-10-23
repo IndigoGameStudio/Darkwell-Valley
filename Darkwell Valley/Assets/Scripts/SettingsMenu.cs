@@ -19,9 +19,10 @@ public class SettingsMenu : MonoBehaviour
 
     private void Awake()
     {
-        // Prisluškivanje svih opcija u postavkama te izima
-        // njihove vrijendosti prilikom promjene te ih sprema
-        // i postavlja te vrijednosti za stvari koje su namjenjene (Volume, grafika, full screen itd.)
+        /** 
+        Prisluškivanje svih opcija u postavkama te izima
+        njihove vrijendosti prilikom promjene te ih sprema
+        i postavlja te vrijednosti za stvari koje su namjenjene (Volume, grafika, full screen itd.)*/
 
         _volumeSlider.onValueChanged.AddListener((value) =>
         {
@@ -57,8 +58,8 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
-        // Prilikom starta igrice povlači sve spremljene informacije iz ScriptableObjecta
-        // te ih implementira u UI.
+        /** Prilikom starta igrice povlači sve spremljene informacije iz ScriptableObjecta
+         te ih implementira u UI.*/
         LoadResolutions();
         _volumeSlider.value = _settings.Volume;
         _sensivitySldier.value = _settings.Sensivity;
@@ -73,8 +74,8 @@ public class SettingsMenu : MonoBehaviour
     private void LoadResolutions()
     {
 
-        // Uzima sve važeće rezolucije te ih sprema u listu
-        // nakon ispisane liste sprema u dropdown.
+        /** Uzima sve važeće rezolucije te ih sprema u listu
+        nakon ispisane liste sprema u dropdown. */
         resolutions = Screen.resolutions;
         List<string> options = new List<string>();
         _resolutionDropdown.ClearOptions();
@@ -91,9 +92,9 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution (int resolutionIndex)
     {
-        // Postavlja odabranu rezoluciju nakon pritiska opcije u dropdownu.
-        // Ova funckija se aktivira na eventu u Inspectoru.
-        // Uzima stupčanju vrijednost (dropdown) i postavlja ovdje kako bi se znalo koju rezoluciju treba postaviti.
+        /** Postavlja odabranu rezoluciju nakon pritiska opcije u dropdownu.
+        Ova funckija se aktivira na eventu u Inspectoru.
+        Uzima stupčanju vrijednost (dropdown) i postavlja ovdje kako bi se znalo koju rezoluciju treba postaviti. */
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
