@@ -1,38 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!244 &-7581429493926271237
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 77213f7721e9f924dbee194ea9faeb92
-  m_EffectName: Attenuation
-  m_MixLevel: 93a01953ff446d949a4c764792ed1a6e
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!243 &-7554702098431085239
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Wind
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 7423cc45cd833c540a8a1083759f0075
-  m_Children: []
-  m_Volume: 8be1cbbd49d06ec44b58899d97290841
-  m_Pitch: 02ffce5ff12e7a84cbe884c92b2edd0d
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: -7581429493926271237}
-  m_UserColorIndex: 0
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -49,17 +16,11 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: b4d50c8089084f240aea0feceb39fb69
-    name: Birds
   - guid: 3ae393a420d6ad74a8b288bc8c078926
     name: MasterVolume
-  - guid: 8be1cbbd49d06ec44b58899d97290841
-    name: Wind
   m_AudioMixerGroupViews:
   - guids:
     - f67f350057712c94e8e3739c3f0d6f63
-    - 2797d479b851d8d45aaad682604f58b2
-    - 7423cc45cd833c540a8a1083759f0075
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -72,9 +33,7 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: f67f350057712c94e8e3739c3f0d6f63
-  m_Children:
-  - {fileID: 3075319385598082131}
-  - {fileID: -7554702098431085239}
+  m_Children: []
   m_Volume: 3ae393a420d6ad74a8b288bc8c078926
   m_Pitch: 5c0ba41c9e43b374c91f2317550fe4cc
   m_Send: 00000000000000000000000000000000
@@ -113,36 +72,3 @@ AudioMixerSnapshotController:
     88f21b25f9b9bd24ca62dcc8303f9df8: -60.40684
     0a99c76e83ab9d84cbe8e17622d9d9af: -8.362404
   m_TransitionOverrides: {}
---- !u!244 &2056359926855308790
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 07bab57f98f0c5645b5d1c360af223a8
-  m_EffectName: Attenuation
-  m_MixLevel: 4367f9f1f12c8a34287696edabe37495
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!243 &3075319385598082131
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Birds
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 2797d479b851d8d45aaad682604f58b2
-  m_Children: []
-  m_Volume: b4d50c8089084f240aea0feceb39fb69
-  m_Pitch: 472621fb6e8ee214b82ffa89b757bd1d
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 2056359926855308790}
-  m_UserColorIndex: 0
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
