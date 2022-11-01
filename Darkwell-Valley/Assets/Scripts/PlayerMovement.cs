@@ -4,9 +4,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
 
-    [SerializeField] float speed = 6.5f;
+    [SerializeField] float speed = 5.5f;
     [SerializeField] float gravity = -10;
     [SerializeField] float jumpHeight = 10;
+    [SerializeField] float SpeedMultiplier = 2;
 
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundRange = 0.5f;
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGround;
+    bool isSprinting;
 
     void Update()
     {
@@ -32,6 +34,18 @@ public class PlayerMovement : MonoBehaviour
         if(isGround == true && velocity.y < 0)
         {
             velocity.y = -2;
+        }
+        /**
+         Ukoliko je pristisnut Left Shift mijenjamo varjablu 
+        isSprinting u true, inace je false
+         **/
+        if (Input.GetKey(KeyCode.LeftShift)) 
+        { 
+            isSprinting = true;
+        }
+        else 
+        {
+            isSprinting = false;
         }
 
         /** 
@@ -69,5 +83,14 @@ public class PlayerMovement : MonoBehaviour
         */
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        /**
+         Ako je pritistnut leftshift, odnosno isSprinting = true,
+        treba povecati brzinu za zadani multiplier
+         */
+        if (isSprinting == true)
+        {
+            controller.Move(move * speed * Time.deltaTime * SpeedMultiplier);
+        }
     }
 }
