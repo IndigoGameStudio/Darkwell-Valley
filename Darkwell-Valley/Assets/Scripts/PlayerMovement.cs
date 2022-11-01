@@ -4,16 +4,20 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
 
-    [SerializeField] float speed = 6.5f;
+    [SerializeField] float walkingSpeed = 5.5f;
     [SerializeField] float gravity = -10;
     [SerializeField] float jumpHeight = 10;
+    [SerializeField] float SpeedMultiplier = 2;
 
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundRange = 0.5f;
     [SerializeField] LayerMask groundMask;
-
+    
     Vector3 velocity;
     bool isGround;
+    bool isSprinting;
+    float Speed;
+    float runSpeed;
 
     void Update()
     {
@@ -33,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2;
         }
-
+       
         /** 
          ukoliko se pritisne space i igrač je na podu
          dodajemo velocity s jačinom jumpHeight * -2 i puta gravitacija
@@ -52,14 +56,26 @@ public class PlayerMovement : MonoBehaviour
         */
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
+        /**
+         Ako je pritistnut leftshift, odnosno isSprinting = true,
+        treba povecati brzinu za zadani multiplier
+         */
 
         /** 
          Izračunavamo -1 1 vrijednosti s transform pozicjama i dodajmo
          ih u controller move kako bi znao igrač gdje se kretati
          i to možimo s brzinom kretanja 
+         Dodajemo runSpeed odnosno brzinu trcanja (sprinta) mnozenjem 
+         multipliera s brzinom hodanja
         */
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
-        controller.Move(move * speed * Time.deltaTime);
+        runSpeed = walkingSpeed * SpeedMultiplier;
+        /**
+         Ako je pitisnut Left Shift, za brzinu uzimamo brzinu trcanja,
+        inace se uzima brzina hodanja
+         */
+        Speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkingSpeed;
+        controller.Move(move * Speed * Time.deltaTime);
 
         /** 
         Dodajmo konstatno zamišljen broj u velocity.y a "Y" je visina
@@ -68,6 +84,9 @@ public class PlayerMovement : MonoBehaviour
         više vuče ka dole.
         */
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+       
+
+        
+      
     }
 }
