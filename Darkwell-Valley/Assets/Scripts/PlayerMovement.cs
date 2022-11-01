@@ -15,9 +15,7 @@ public class PlayerMovement : MonoBehaviour
     
     Vector3 velocity;
     bool isGround;
-    bool isSprinting;
     float Speed;
-    float runSpeed;
 
     void Update()
     {
@@ -69,12 +67,11 @@ public class PlayerMovement : MonoBehaviour
          multipliera s brzinom hodanja
         */
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
-        runSpeed = walkingSpeed * SpeedMultiplier;
         /**
          Ako je pitisnut Left Shift, za brzinu uzimamo brzinu trcanja,
         inace se uzima brzina hodanja
          */
-        Speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkingSpeed;
+        Speed = Input.GetKey(KeyCode.LeftShift) ? walkingSpeed * SpeedMultiplier : walkingSpeed;
         controller.Move(move * Speed * Time.deltaTime);
 
         /** 
