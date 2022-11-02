@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         inace se uzima brzina hodanja
          */
 
+
         Speed = Input.GetKey(KeyCode.LeftShift) ? walkingSpeed * SpeedMultiplier : walkingSpeed;
         controller.Move(move * Speed * Time.deltaTime);
 
