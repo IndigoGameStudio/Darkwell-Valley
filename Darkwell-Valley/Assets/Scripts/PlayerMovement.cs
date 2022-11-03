@@ -83,16 +83,6 @@ public class PlayerMovement : MonoBehaviour
         više vuče ka dole.
         */
         velocity.y += gravity * Time.deltaTime;
-<<<<<<< Updated upstream
-
-
-
-
-=======
         controller.Move(velocity * Time.deltaTime);
-
-
-
->>>>>>> Stashed changes
     }
 }
