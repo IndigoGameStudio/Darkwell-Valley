@@ -27,6 +27,15 @@ public class PlayerMovement : MonoBehaviour
         */
         isGround = Physics.CheckSphere(groundCheck.position, groundRange, groundMask);
 
+
+        /** Uzima poziciju lokacije X i onemogućuje da poziicja X bude manja od 0 ili veće od 300 što je i dimenzija mape
+         također radi na isti princip za Y */
+        float xPos = Mathf.Clamp(transform.localPosition.x, 0, 300);
+        float zPos = Mathf.Clamp(transform.localPosition.z, 0, 300);
+        /** Vrijednosti pozicija X i Y se postavlja u poziciju igrača. */
+        transform.localPosition = new Vector3(xPos, transform.localPosition.y, zPos);
+
+
         /** 
         Ukoliko smo na podu i velocity je ispod 0 resetirat
         će nam guranje igrača ka zemlji koja simulira gravitaciju.
