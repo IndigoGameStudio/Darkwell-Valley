@@ -10,7 +10,7 @@ public class Settings : ScriptableObject
 
     [Header("Spremanje jačine pomicanja miša.")]
     [SerializeField]
-    private float sensivity;
+    public float sensivity;
     public float Sensivity { get { return sensivity; } set { sensivity = value; } }
 
 
