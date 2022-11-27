@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ObjectSettings
   m_EditorClassIdentifier: 
   volume: 0.32765105
-  sensivity: 8.061309
+  sensivity: 8
   quailty: 0
   resolution: 16
   fullscreen: 1

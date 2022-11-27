@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-
 public class MouseLook : MonoBehaviour
 {
     [SerializeField] Transform playerBody;
-    [SerializeField] float Sensitivity = 10;
+    [SerializeField] float Sensitivity;
+    public Settings settings;
     float xRotation = 0;
 
     private void Start()
@@ -12,6 +12,8 @@ public class MouseLook : MonoBehaviour
         i gasimo njegovu vidljivost. */
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        Sensitivity = settings.sensivity * 10;
     }
 
 
